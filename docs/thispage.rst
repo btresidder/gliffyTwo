@@ -4,7 +4,7 @@ This page
 
 .. image:: /images/test-svg.svg
 
-some text
+
 
 .. raw:: html
 
