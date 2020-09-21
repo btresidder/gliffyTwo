@@ -2,10 +2,11 @@
 This page
 =========
 
-.. image:: /images/test-svg.svg
+
 
 
 
 .. raw:: html
 
-   <object data="_images/test-svg.svg" type="image/svg+xml" style="display:none"></object>
+   <img alt="_images/test-svg.svg" src="_images/test-svg.svg">
+   <object data="_images/test-svg.svg" type="image/svg+xml"></object>
