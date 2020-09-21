@@ -8,9 +8,8 @@ This page
 
 .. raw:: html
    
-   <object data="images/test-svg.svg" type="image/svg+xml"></object>
+   <object data="_images/test-svg.svg" type="image/svg+xml"></object>
 
 below is code from the gliffy extension
 
-.. sphinxgliffy::
-   :path: /_images/test-svg.svg
+
