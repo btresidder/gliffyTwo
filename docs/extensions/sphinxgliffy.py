@@ -51,10 +51,11 @@ def visit_gliffy(self, node):
     code = """<object data='_"""
     code += options['uri']
     code += """' type='image/svg+xml'></object>"""
-
+    
     # Adds the <object> to the 
     self.body.append(code)
-    #raise nodes.SkipNode
+
+    options = None
 
 def depart_gliffy(self, node):
     pass
