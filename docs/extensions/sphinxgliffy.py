@@ -28,7 +28,7 @@ class Sphinxgliffy(Directive):
         options = self.options
         
         # Creates the svg class
-        html_node = null
+        html_node = Null
         html_node = gliffy()
         
         # Adds html class "gliffy_img" to all nodes created from now on
