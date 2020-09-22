@@ -39,7 +39,9 @@ class Sphinxgliffy(Directive):
         ##html_node += par
         ##html_node += finish()
         
-        return [html_node]
+        image_node = nodes.image(rawsource=self.block_text, **self.options)
+        
+        return [image_node]
 
 # Visit and depart methods come as pairs
 # Visit creates the collapsible
