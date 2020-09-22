@@ -27,10 +27,10 @@
     </g>
     <g id="y.node.0">
       <a target="_blank" xlink:type="simple" xlink:href="http://en.cppreference.com/w/cpp/io/ios_base" xlink:show="new">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(255,204,153)">
+        <g fill="rgb(154,255,184)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(154,255,184)">
           <rect x="254" width="148" height="24" y="91" stroke="none"/>
         </g>
-        <g fill="rgb(255,255,218)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(255,255,218)">
+        <g fill="rgb(255,255,218)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(154,255,184)">
           <rect x="253" width="1" height="26" y="90" stroke="none"/>
           <rect x="254" width="148" height="1" y="90" stroke="none"/>
           <rect fill="rgb(178,142,107)" x="254" width="149" height="1" y="115" stroke="none"/>
@@ -45,7 +45,7 @@
     </g>
     <g id="y.node.1">
       <a target="_blank" xlink:type="simple" xlink:href="http://en.cppreference.com/w/cpp/io/basic_ios" xlink:show="new">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(255,204,153)">
+        <g fill="rgb(154,255,184)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(154,255,184)">
           <rect x="254" width="148" height="24" y="203" stroke="none"/>
           <rect fill="rgb(255,255,218)" x="253" width="1" height="26" y="202" stroke="none"/>
           <rect fill="rgb(255,255,218)" x="254" width="148" height="1" y="202" stroke="none"/>
@@ -61,7 +61,7 @@
     </g>
     <g id="y.node.2">
       <a target="_blank" xlink:type="simple" xlink:href="http://en.cppreference.com/w/cpp/io/basic_ostream" xlink:show="new">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(255,204,153)">
+        <g fill="rgb(154,255,184)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(154,255,184)">
           <rect x="104" width="148" height="24" y="310" stroke="none"/>
           <rect fill="rgb(255,255,218)" x="103" width="1" height="26" y="309" stroke="none"/>
           <rect fill="rgb(255,255,218)" x="104" width="148" height="1" y="309" stroke="none"/>
@@ -77,7 +77,7 @@
     </g>
     <g id="y.node.3">
       <a target="_blank" xlink:type="simple" xlink:href="http://en.cppreference.com/w/cpp/io/basic_istream" xlink:show="new">
-        <g fill="rgb(255,204,153)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(255,204,153)">
+        <g fill="rgb(154,255,184)" text-rendering="geometricPrecision" shape-rendering="geometricPrecision" transform="matrix(1,0,0,1,-88,-75)" stroke="rgb(154,255,184)">
           <rect x="404" width="148" height="24" y="310" stroke="none"/>
           <rect fill="rgb(255,255,218)" x="403" width="1" height="26" y="309" stroke="none"/>
           <rect fill="rgb(255,255,218)" x="404" width="148" height="1" y="309" stroke="none"/>
