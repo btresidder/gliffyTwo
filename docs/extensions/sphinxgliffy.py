@@ -49,7 +49,7 @@ def visit_gliffy(self, node):
     code = """<object data='_"""
     code += options['uri']
     code += """' type='image/svg+xml'></object>"""
-    
+    options['uri'] = None
     # Adds the <object> to the 
     self.body.append(code)
 
