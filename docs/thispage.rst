@@ -11,3 +11,5 @@ This page
    
    <object data="_images/test-svg.svg" type="image/svg+xml"></object>
 
+
+here is some text
