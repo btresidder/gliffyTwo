@@ -52,9 +52,10 @@ def visit_gliffy(self, node):
     
     # Adds the <object> to the 
     self.body.append(code)
+    raise nodes.SkipNode
 
 def depart_gliffy(self, node):
-    raise nodes.SkipNode
+    pass
 
 # Setups up directives and nodes
 def setup(app):
