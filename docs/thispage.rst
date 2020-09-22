@@ -10,5 +10,4 @@ This page
 
 here is some text
 
-.. sphinxgliffy::
-   :path: /images/test-svg.svg
+.. sphinxgliffy:: /images/test-svg.svg

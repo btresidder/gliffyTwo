@@ -31,8 +31,8 @@ class Sphinxgliffy(Directive):
         # nested_parse needed so other directives can be inside the collapsible
         ##par = nodes.paragraph()
         ##self.state.nested_parse(self.content, self.content_offset, par)
-        ##reference = directives.uri(self.arguments[0])
-        ##self.options['uri'] = reference
+        reference = directives.uri(self.arguments[0])
+        self.options['uri'] = reference
         options = self.options
         # Creates the classes to call the other methods
         html_node = gliffy()
@@ -49,9 +49,9 @@ def visit_gliffy(self, node):
     # Collapsible is made with <details> tags
     # The title is represented in <summary> tags
     code = """<object data='"""
-    code += """_images/test-svg.svg"""
+    ##code += """_images/test-svg.svg"""
+    code += options['uri']
     code += """' type='image/svg+xml'></object>"""
-    ##code += options["path"]
     ##code += """' type="image/svg+xml></object>"""
     self.body.append(code)
 
