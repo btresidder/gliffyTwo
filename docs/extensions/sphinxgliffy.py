@@ -27,7 +27,7 @@ class Sphinxgliffy(Directive):
         reference = directives.uri(self.arguments[0])
         self.options['uri'] = reference
         options = self.options
-        
+        print(options)
         # Creates the svg class
         html_node = None
         html_node = gliffy()
