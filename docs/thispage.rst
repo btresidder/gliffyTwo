@@ -10,4 +10,4 @@ This page
 
 here is some text
 
-.. sphinxgliffy:: /images/test-svg.svg
+.. sphinxgliffy:: _images/test-svg.svg
