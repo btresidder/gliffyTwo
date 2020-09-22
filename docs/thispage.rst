@@ -3,7 +3,7 @@ This page
 =========
 
 
-.. image:: /images/test-svg.svg
+.. image:: _images/test-svg.svg
 
 
 
