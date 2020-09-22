@@ -39,6 +39,7 @@ class Sphinxgliffy(Directive):
         # Necessary to pass X Frame Options denial
         # Image is not visible in browser, hidden by gliffy_img class
         html_node += nodes.image(rawsource=self.block_text, **self.options)
+        self.add_name(html_node)
         print(html_node)
         return [html_node]
 
