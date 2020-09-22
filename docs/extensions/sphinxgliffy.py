@@ -20,6 +20,7 @@ class Sphinxgliffy(Directive):
         
         # Needed to get access to options
         global options
+        options = None
 
         # Reference is the link to the svg file
         # Adds reference to the options list
