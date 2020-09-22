@@ -39,7 +39,7 @@ class Sphinxgliffy(Directive):
         # Necessary to pass X Frame Options denial
         # Image is not visible in browser, hidden by gliffy_img class
         html_node += nodes.image(rawsource=self.block_text, **self.options)
-        
+        print(html_node)
         return [html_node]
 
 # Visit and depart methods come as pairs
@@ -53,7 +53,7 @@ def visit_gliffy(self, node):
     
     # Adds the <object> to the 
     self.body.append(code)
-    raise nodes.SkipNode
+    #raise nodes.SkipNode
 
 def depart_gliffy(self, node):
     pass
