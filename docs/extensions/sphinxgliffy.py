@@ -27,7 +27,7 @@ class Sphinxgliffy(Directive):
         reference = directives.uri(self.arguments[0])
         self.options['uri'] = reference
         options = self.options
-        print(options)
+        print("options: " + options)
         # Creates the svg class
         html_node = None
         html_node = gliffy()
@@ -40,7 +40,7 @@ class Sphinxgliffy(Directive):
         # Image is not visible in browser, hidden by gliffy_img class
         html_node += nodes.image(rawsource=self.block_text, **self.options)
         self.add_name(html_node)
-        print(html_node)
+        print("html_none: " + html_node)
         return [html_node]
 
 # Visit and depart methods come as pairs
@@ -55,10 +55,8 @@ def visit_gliffy(self, node):
     # Adds the <object> to the 
     self.body.append(code)
 
-    options = None
-
 def depart_gliffy(self, node):
-    pass
+    options = None
 
 # Setups up directives and nodes
 def setup(app):
