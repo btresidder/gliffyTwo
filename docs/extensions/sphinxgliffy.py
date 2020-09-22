@@ -48,7 +48,7 @@ def visit_gliffy(self, node):
 
     # Collapsible is made with <details> tags
     # The title is represented in <summary> tags
-    code = """<object data='"""
+    code = """<object data='_"""
     ##code += """_images/test-svg.svg"""
     code += options['uri']
     code += """' type='image/svg+xml'></object>"""
