@@ -4,7 +4,7 @@ from docutils.parsers.rst import directives
 
 # Class represents the node used to insert the svg
 class gliffy(nodes.Structural, nodes.Element):
-    pass
+    print("gliffy call")
 
 # The main class
 class Sphinxgliffy(Directive):
