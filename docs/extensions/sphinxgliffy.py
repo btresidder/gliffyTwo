@@ -30,7 +30,7 @@ class Sphinxgliffy(Directive):
         print(options)
         # Creates the svg class
         html_node = None
-        html_node = nodes.raw(html=gliffy())
+        html_node = gliffy()
         
         # Adds html class "gliffy_img" to all nodes created from now on
         self.options['classes'] = ['gliffy_img']
@@ -51,7 +51,7 @@ def visit_gliffy(self, node):
     code = """<object data='_"""
     code += options['uri']
     code += """' type='image/svg+xml'></object>"""
-    
+
     # Adds the <object> to the 
     self.body.append(code)
     #raise nodes.SkipNode
