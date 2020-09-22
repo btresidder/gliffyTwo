@@ -63,7 +63,7 @@ def depart_gliffy(self, node):
 # Setups up directives and nodes
 def setup(app):
     app.add_directive("sphinxgliffy", Sphinxgliffy)
-    app.add_node(gliffy, html=(visit_gliffy, depart_gliffy))
+    #app.add_node(gliffy, html=(visit_gliffy, depart_gliffy))
 
     return {
         'version': '0.1',
