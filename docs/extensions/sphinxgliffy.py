@@ -38,7 +38,7 @@ class Sphinxgliffy(Directive):
         html_node = gliffy()
         ##html_node += par
         ##html_node += finish()
-        self.options['classes'] = "glif"
+        self.options['classes'] = ['glif']
         html_node += nodes.image(rawsource=self.block_text, **self.options)
         
         return [html_node]
