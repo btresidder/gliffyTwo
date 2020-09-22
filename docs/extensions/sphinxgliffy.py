@@ -2,13 +2,9 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
 
-# Class represents the node used to start the <details> tag
+# Class represents the node used to insert the svg
 class gliffy(nodes.Structural, nodes.Element):
     pass
-
-# Class represents the node used to end the <details> tag
-#class finish(nodes.Structural, nodes.Element):
-#    pass
 
 # The main class
 class Sphinxgliffy(Directive):
@@ -18,61 +14,50 @@ class Sphinxgliffy(Directive):
     optional_arguments = 0
     final_argument_whitespace = True
     option_spec = {}
-    ##'path': directives.unchanged,}
     has_content = False
     
     def run(self):
         
         # Needed to get access to options
         global options
-        ##options = self.options
-        
-        # This is the content of the collapsible
-        # nested_parse needed so other directives can be inside the collapsible
-        ##par = nodes.paragraph()
-        ##self.state.nested_parse(self.content, self.content_offset, par)
+
+        # Reference is the link to the svg file
+        # Adds reference to the options list
         reference = directives.uri(self.arguments[0])
         self.options['uri'] = reference
         options = self.options
-        # Creates the classes to call the other methods
+        
+        # Creates the svg class
         html_node = gliffy()
-        ##html_node += par
-        ##html_node += finish()
+        
+        # Adds html class "gliffy_img" to all nodes created from now on
         self.options['classes'] = ['gliffy_img']
+        
+        # Creates an img version of the svg
+        # Necessary to pass X Frame Options denial
         html_node += nodes.image(rawsource=self.block_text, **self.options)
         
         return [html_node]
 
 # Visit and depart methods come as pairs
-# Visit creates the collapsible
-# The <details> tag is left open so rst (including directives) can be inserted
+# Visit method inserts the svg
 def visit_gliffy(self, node):
 
-    # Collapsible is made with <details> tags
-    # The title is represented in <summary> tags
+    # Adds the svg as an <object>
     code = """<object data='_"""
-    ##code += """_images/test-svg.svg"""
     code += options['uri']
     code += """' type='image/svg+xml'></object>"""
-    ##code += """' type="image/svg+xml></object>"""
+    
+    # Adds the <object> to the 
     self.body.append(code)
 
 def depart_gliffy(self, node):
     pass
 
-#def visit_col_html(self, node):
-#    pass
-
-# Closes the <details> tag after rst has been inserted
-#def depart_col_html(self, node):
-#    code = """</details>"""
-#    self.body.append(code) 
-
 # Setups up directives and nodes
 def setup(app):
     app.add_directive("sphinxgliffy", Sphinxgliffy)
     app.add_node(gliffy, html=(visit_gliffy, depart_gliffy))
-    #app.add_node(finish, html=(visit_col_html, depart_col_html))
 
     return {
         'version': '0.1',
