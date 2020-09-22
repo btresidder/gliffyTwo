@@ -13,3 +13,6 @@ This page
 
 
 here is some text
+
+.. sphixgliffy::
+   :path: /images/test-svg.svg
