@@ -19,7 +19,7 @@ class Sphinxgliffy(Directive):
     def run(self):
         
         # Needed to get access to options
-        global options
+        global options[]
         
 
         # Reference is the link to the svg file
