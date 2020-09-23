@@ -2,7 +2,7 @@
 That page
 =========
 
-.. sphinxgliffy:: images/fourth-svg.svg
+.. sphinxgliffy:: _images/fourth-svg.svg
 
 
 .. sphinxgliffy:: images/test-svg.svg
