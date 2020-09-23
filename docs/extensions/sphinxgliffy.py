@@ -30,7 +30,7 @@ class Sphinxgliffy(Directive):
         # Adds reference to the options list
         reference = directives.uri(self.arguments[0])
         self.options['uri'] = reference
-        options += reference
+        options += self.options['uri']
         print("options: ")
         print(options[counter])
         counter += 1
