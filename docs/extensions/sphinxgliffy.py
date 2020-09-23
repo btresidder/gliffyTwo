@@ -54,7 +54,7 @@ def visit_gliffy(self, node):
     code = """<object data='_"""
     if index == 3:
         code += "_images/fourth-svg.svg"
-    else
+    else:
         code += options[index]
         
     code += """' type='image/svg+xml'></object>"""
