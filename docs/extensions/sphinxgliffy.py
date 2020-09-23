@@ -19,16 +19,16 @@ class Sphinxgliffy(Directive):
     def run(self):
         
         # Needed to get access to options
-        global options[]
+        #global options[]
         
 
         # Reference is the link to the svg file
         # Adds reference to the options list
         reference = directives.uri(self.arguments[0])
         self.options['uri'] = reference
-        options += [self.options]
+        #options += [self.options]
         print("options: ")
-        print(options)
+        print(self.options)
         # Creates the svg class
         html_node = None
         html_node = gliffy()
@@ -51,7 +51,7 @@ def visit_gliffy(self, node):
 
     # Adds the svg as an <object>
     code = """<object data='_"""
-    code += options['uri']
+    code += self.options['uri']
     code += """' type='image/svg+xml'></object>"""
     print("options in visit: ")
     print(options)
