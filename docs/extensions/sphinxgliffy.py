@@ -2,7 +2,7 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
 
-options = [,]
+options = []
 counter = 0
 
 # Class represents the node used to insert the svg
