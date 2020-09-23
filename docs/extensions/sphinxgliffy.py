@@ -55,7 +55,7 @@ class Sphinxgliffy(Directive):
 # Visit and depart methods come as pairs
 # Visit method inserts the svg
 def visit_gliffy(self, node):
-
+    global index
     # Adds the svg to an <object>
     code = """<object data='_"""
     ##code += self.options['uri']
