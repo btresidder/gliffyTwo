@@ -2,8 +2,8 @@ from docutils import nodes
 from docutils.parsers.rst import Directive
 from docutils.parsers.rst import directives
 
-options = []
-index = 0
+options = [] # Stores URIs
+index = 0    # Counter for URI list
 
 # Class represents the node used to insert the svg
 class gliffy(nodes.Structural, nodes.Element):
@@ -24,13 +24,13 @@ class Sphinxgliffy(Directive):
         # Needed to get access to options
         global options
         global index
-        
 
         # Reference is the link to the svg file
         # Adds reference to the options list
         reference = directives.uri(self.arguments[0])
         self.options['uri'] = reference
         options.append(self.options['uri'])
+        
         # Creates the svg class
         html_node = None
         html_node = gliffy()
@@ -42,7 +42,7 @@ class Sphinxgliffy(Directive):
         # Necessary to pass X Frame Options denial
         # Image is not visible in browser, hidden by gliffy_img class
         html_node += nodes.image(rawsource=self.block_text, **self.options)
-        self.add_name(html_node)
+        #self.add_name(html_node)
         return [html_node]
 
 # Visit and depart methods come as pairs
