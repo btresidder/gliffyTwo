@@ -20,13 +20,13 @@ class Sphinxgliffy(Directive):
         
         # Needed to get access to options
         global options
-        options = None
+        
 
         # Reference is the link to the svg file
         # Adds reference to the options list
         reference = directives.uri(self.arguments[0])
         self.options['uri'] = reference
-        options = self.options
+        options += [self.options]
         print("options: ")
         print(options)
         # Creates the svg class
