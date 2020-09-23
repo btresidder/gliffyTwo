@@ -52,7 +52,6 @@ def visit_gliffy(self, node):
 
     # Adds the svg to an <object>
     code = """<object data='_"""
-    print("uri is: " + options[index])
     
     # All files are now stored in an images folder on readthedocs
     uri = options[index].split("/")
@@ -73,7 +72,7 @@ def setup(app):
     app.add_node(gliffy, html=(visit_gliffy, depart_gliffy))
 
     return {
-        'version': '0.1',
+        'version': '1.1',
         'parallel_read_safe': True,
         'parallel_write_safe': True,
     }
