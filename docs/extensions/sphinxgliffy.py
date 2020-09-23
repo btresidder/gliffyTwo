@@ -23,7 +23,6 @@ class Sphinxgliffy(Directive):
         
         # Needed to get access to options
         global options
-        global index
 
         # Reference is the link to the svg file
         # Adds reference to the options list
@@ -42,13 +41,15 @@ class Sphinxgliffy(Directive):
         # Necessary to pass X Frame Options denial
         # Image is not visible in browser, hidden by gliffy_img class
         html_node += nodes.image(rawsource=self.block_text, **self.options)
-        #self.add_name(html_node)
+        
         return [html_node]
 
 # Visit and depart methods come as pairs
 # Visit method inserts the svg
 def visit_gliffy(self, node):
+
     global index
+
     # Adds the svg to an <object>
     code = """<object data='_"""
     code += options[index]
