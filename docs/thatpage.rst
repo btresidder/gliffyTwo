@@ -2,6 +2,7 @@
 That page
 =========
 
-.. raw:: html
+.. sphinxgliffy:: images/fourth-svg.svg
 
-  <object data="_images/test-svg.svg" type="image/svg+xml"></object>
+
+.. sphinxgliffy:: images/test-svg.svg

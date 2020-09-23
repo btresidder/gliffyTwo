@@ -10,3 +10,6 @@ below is another svg
 
 .. sphinxgliffy:: images/another-svg.svg
 
+
+.. sphinxgliffy:: images/third-svg.svg
+
