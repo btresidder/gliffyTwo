@@ -54,10 +54,14 @@ def visit_gliffy(self, node):
     # Adds the svg to an <object>
     code = """<object data='_"""
     print("uri is: " + options[index])
-    if index == 0:
-        code += "images/fourth-svg.svg"
-    else:
-        code += options[index]
+    #if index == 0:
+    #    code += "images/fourth-svg.svg"
+    #else:
+    #    code += options[index]
+    
+    uri = options[index].split("/")
+    code += "images/" + uri[len(uri)-1]
+    
         
     code += """' type='image/svg+xml'></object>"""
     index += 1
