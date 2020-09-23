@@ -52,7 +52,11 @@ def visit_gliffy(self, node):
 
     # Adds the svg to an <object>
     code = """<object data='_"""
-    code += options[index]
+    if (index == 3)
+        code += "_images/fourth-svg.svg"
+    else
+        code += options[index]
+        
     code += """' type='image/svg+xml'></object>"""
     index += 1
     
