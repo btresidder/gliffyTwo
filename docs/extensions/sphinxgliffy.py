@@ -4,6 +4,7 @@ from docutils.parsers.rst import directives
 
 options = []
 counter = 0
+index = 0
 
 # Class represents the node used to insert the svg
 class gliffy(nodes.Structural, nodes.Element):
@@ -24,6 +25,7 @@ class Sphinxgliffy(Directive):
         # Needed to get access to options
         global options
         global counter
+        global index
         
 
         # Reference is the link to the svg file
@@ -57,11 +59,11 @@ def visit_gliffy(self, node):
     # Adds the svg to an <object>
     code = """<object data='_"""
     ##code += self.options['uri']
-    code += options[counter]
+    code += options[index]
     code += """' type='image/svg+xml'></object>"""
     print("options in visit: ")
-    print(options[counter])
-
+    print(options[index])
+    index += 1
     # Adds the <object>
     self.body.append(code)
 
