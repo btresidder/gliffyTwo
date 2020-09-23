@@ -40,7 +40,6 @@ class Sphinxgliffy(Directive):
         # Creates an img version of the svg
         # Necessary to pass X Frame Options denial
         # Image is not visible in browser, hidden by gliffy_img class
-        #html_node += nodes.image(rawsource=self.block_text, **self.options)
         html_node += nodes.image(rawsource=self.options['uri'], **self.options)
         
         return [html_node]

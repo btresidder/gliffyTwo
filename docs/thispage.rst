@@ -8,7 +8,7 @@ This page
 below is another svg
 
 
-.. sphinxgliffy:: images/another-svg.svg
+.. sphinxgliffy:: images/folder2/folder3/another-svg.svg
 
 
 .. sphinxgliffy:: images/third-svg.svg
