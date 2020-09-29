@@ -50,7 +50,7 @@ class Sphinxgliffy(Directive):
             uri = self.options['uri']
             uri = uri[:3] + "png"
             print("image uri is: " + uri)
-            html_node = nodes.image(rawsource="images/test-svg.png", **self.options)
+            html_node = nodes.image(rawsource="test-svg.png", **self.options)
         
         return [html_node]
 
