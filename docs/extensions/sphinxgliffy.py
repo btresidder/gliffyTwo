@@ -46,9 +46,8 @@ class Sphinxgliffy(Directive):
             html_node += nodes.image(rawsource=self.options['uri'], **self.options)
             
         else:
-            uri = self.options['uri']
-            uri = uri[:3] + "png"
-            html_node = nodes.image(rawsource=uri, **self.options)
+            # This should insert the svg into the pdf but it does nothing
+            html_node = nodes.image(rawsource=self.options['uri'], **self.options)
         
         return [html_node]
 
