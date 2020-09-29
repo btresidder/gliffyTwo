@@ -36,13 +36,15 @@ class Sphinxgliffy(Directive):
         if isLatex == False:
             html_node = gliffy()
         
-        # Adds html class "gliffy_img" to all nodes created from now on
-        self.options['classes'] = ['gliffy_img']
+            # Adds html class "gliffy_img" to all nodes created from now on
+            self.options['classes'] = ['gliffy_img']
         
         # Creates an img version of the svg
         # Necessary to pass X Frame Options denial
         # Image is not visible in browser, hidden by gliffy_img class
-        html_node += nodes.image(rawsource=self.options['uri'], **self.options)
+            html_node += nodes.image(rawsource=self.options['uri'], **self.options)
+        else:
+            html_node = nodes.image(rawsource=self.options['uri'], **self.options)
         
         return [html_node]
 
