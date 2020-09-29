@@ -4,6 +4,7 @@ from docutils.parsers.rst import directives
 
 options = [] # Stores URIs
 index = 0    # Counter for URI list
+isLatex = False
 
 # Class represents the node used to insert the svg
 class gliffy(nodes.Structural, nodes.Element):
@@ -32,7 +33,8 @@ class Sphinxgliffy(Directive):
         
         # Creates the svg class
         html_node = None
-        html_node = gliffy()
+        if isLatex == False:
+            html_node = gliffy()
         
         # Adds html class "gliffy_img" to all nodes created from now on
         self.options['classes'] = ['gliffy_img']
@@ -66,10 +68,19 @@ def visit_gliffy(self, node):
 def depart_gliffy(self, node):
     pass
 
+# Determines if the build type is LaTeX (pdf)
+def build_type(app):
+
+    global isLatex
+
+    if app.builder.name == "latex":
+        isLatex = True
+
 # Setups up directives and nodes
 def setup(app):
     app.add_directive("sphinxgliffy", Sphinxgliffy)
     app.add_node(gliffy, html=(visit_gliffy, depart_gliffy))
+    app.connect('builder-inited', build_type)
 
     return {
         'version': '1.1',
