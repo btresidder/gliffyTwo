@@ -13,4 +13,4 @@ below is another svg
 
 .. sphinxgliffy:: images/third-svg.svg
 
-.. image:: images/test-svg.png
+.. image:: _images/test-svg.png
