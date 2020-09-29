@@ -51,6 +51,7 @@ class Sphinxgliffy(Directive):
             uri = uri[:3] + "png"
             print("image uri is: " + uri)
             html_node = nodes.image(rawsource="test-svg.png", **self.options)
+            self.add_name(html_node)
         
         return [html_node]
 
